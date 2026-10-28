@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sivasankari M — Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef2f4;--surface:#fff;--ink:#16243a;--muted:#55657a;--line:#cfd9e0;--accent:#0d7480;--accent-ink:#fff;--alert:#c4540a;--grid:#dfe7ec;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101a26;--surface:#18263a;--ink:#e8eef4;--muted:#9fb0c2;--line:#2b3d55;--accent:#4fc3cf;--accent-ink:#0b1622;--alert:#ff9c5a;--grid:#1a2a3e}}
+:root[data-theme="dark"]{--bg:#101a26;--surface:#18263a;--ink:#e8eef4;--muted:#9fb0c2;--line:#2b3d55;--accent:#4fc3cf;--accent-ink:#0b1622;--alert:#ff9c5a;--grid:#1a2a3e}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:'Bricolage Grotesque',Georgia,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-top:.8rem;padding-bottom:.8rem}
+.nav b{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.1rem}
+.nav ul{display:flex;gap:1.1rem;list-style:none;margin:0;padding:0;overflow-x:auto;font-size:.95rem}
+.nav a{text-decoration:none;color:var(--muted);white-space:nowrap}.nav a:hover{color:var(--accent)}
+.hero{padding:4rem 0 3.5rem;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:32px 32px;border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:2.5rem;align-items:center}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:800;letter-spacing:-.03em}
+.role{font-family:'Bricolage Grotesque',sans-serif;font-size:1.5rem;font-weight:500;color:var(--accent);margin:.6rem 0 1rem}
+.hero p.lead{max-width:34rem;color:var(--muted)}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem}
+.btn{display:inline-block;padding:.7rem 1.2rem;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid var(--accent)}
+.btn.main{background:var(--accent);color:var(--accent-ink)}.btn.alt{color:var(--accent)}
+.btn:hover{filter:brightness(1.1)}
+.scope{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1rem}
+.scope-top{display:flex;justify-content:space-between;font-size:.85rem;color:var(--muted);margin-bottom:.5rem;gap:.5rem;flex-wrap:wrap}
+.status{font-weight:600;color:var(--accent)}.status.bad{color:var(--alert)}
+.scope svg{width:100%;height:auto;display:block}
+.readouts{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;margin-top:.6rem;font-size:.8rem;color:var(--muted)}
+.readouts b{display:block;color:var(--ink);font-size:1rem}
+section{padding:3.5rem 0;border-bottom:1px solid var(--line)}
+section h2{font-size:clamp(1.8rem,4vw,2.4rem);margin-bottom:1.5rem}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:2.5rem}
+.facts{margin:0;padding:0;list-style:none;border-left:3px solid var(--accent);padding-left:1.1rem}
+.facts li{margin-bottom:.8rem}.facts span{display:block;font-size:.85rem;color:var(--muted)}
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.5rem;margin-bottom:1.25rem}
+.proj.big{border-left:6px solid var(--accent)}
+.proj h3{font-size:1.4rem;margin-bottom:.6rem}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 .9rem;padding:0;list-style:none}
+.tags li{font-size:.82rem;padding:.15rem .6rem;border:1px solid var(--line);border-radius:99px;color:var(--muted)}
+.proj ul.pts{margin:0 0 1rem;padding-left:1.2rem}.proj ul.pts li{margin-bottom:.45rem}
+.proj>a{font-weight:600;color:var(--accent)}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem 2rem}
+.skills h3{font-size:1.05rem;margin-bottom:.5rem;color:var(--accent)}
+.skills p{margin:0}
+.tl{margin:0;padding:0;list-style:none}
+.tl li{display:grid;grid-template-columns:9rem 1fr;gap:1rem;padding:1rem 0;border-top:1px solid var(--line)}
+.tl li:first-child{border-top:0;padding-top:0}
+.tl time{color:var(--muted);font-size:.95rem}.tl b{display:block}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem}
+.two h3{margin-bottom:.8rem;font-size:1.2rem}.two ul{margin:0;padding-left:1.2rem}.two li{margin-bottom:.6rem}
+.contact{text-align:left}.contact p{max-width:34rem;color:var(--muted)}
+.clist{list-style:none;padding:0;margin:1.2rem 0 0;display:grid;gap:.4rem}
+.clist a{color:var(--accent);font-weight:600}
+footer{padding:1.5rem 0;color:var(--muted);font-size:.9rem}
+@media(max-width:780px){.hero .wrap,.about{grid-template-columns:1fr}.tl li{grid-template-columns:1fr;gap:.2rem}.hero{padding:2.5rem 0}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap"><b>Sivasankari M</b>
+<nav aria-label="Sections"><ul><li><a href="#about">About</a></li><li><a href="#projects">Projects</a></li><li><a href="#skills">Skills</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li></ul></nav></div></header>
+
+<main>
+<div class="hero"><div class="wrap">
+<div>
+<h1>Sivasankari M</h1>
+<p class="role">Software Engineer</p>
+<p class="lead">I build web apps and IoT + ML systems that connect hardware to software. My latest project predicts transformer faults from live sensor data.</p>
+<div class="btns"><a class="btn main" href="#projects">View projects</a><a class="btn alt" href="mailto:sivasankarimurugan10@gmail.com">Email me</a><a class="btn alt" href="https://github.com/sivasankari-m1012" target="_blank" rel="noopener">GitHub</a></div>
+</div>
+<div class="scope" aria-label="Simulated transformer sensor feed from my monitoring project">
+<div class="scope-top"><span>Transformer monitor (simulated feed)</span><span class="status" id="st" role="status">Normal</span></div>
+<svg viewBox="0 0 400 160" role="img" aria-label="Live line chart of simulated transformer readings with occasional anomaly spikes">
+<line x1="0" y1="80" x2="400" y2="80" stroke="var(--line)" stroke-dasharray="4 4"/>
+<polyline id="tr" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round" points=""/>
+<circle id="dot" r="5" fill="var(--accent)" cx="400" cy="80"/>
+</svg>
+<div class="readouts"><div><b id="rv">230 V</b>Voltage</div><div><b id="ra">12.0 A</b>Current</div><div><b id="rt">48 °C</b>Temp</div><div><b id="rs">0.12</b>Anomaly score</div></div>
+</div>
+</div></div>
+
+<section id="about"><div class="wrap about">
+<div><h2>About</h2>
+<p>I’m an Electrical and Electronics Engineering graduate who writes software. I work in Python, JavaScript, React.js, Flask and REST APIs, with solid Data Structures &amp; Algorithms and OOP fundamentals.</p>
+<p>I’ve built full-stack and IoT + ML projects, including a transformer fault-prediction system using an ESP32, an Isolation Forest model and a Flask dashboard. I’m looking for an entry-level Software Engineer or Software Developer role where I can build reliable, scalable, user-focused applications.</p></div>
+<ul class="facts"><li><span>Degree</span>B.E. Electrical and Electronics Engineering, CGPA 7.83</li><li><span>Graduated</span>2026</li><li><span>Based in</span>Thanjavur, Tamil Nadu, India</li><li><span>Looking for</span>Software Engineer / Software Developer (entry level)</li></ul>
+</div></section>
+
+<section id="projects"><div class="wrap"><h2>Projects</h2>
+<article class="proj big"><h3>IoT &amp; ML System for Real-Time Transformer Monitoring and Fault Prediction</h3>
+<ul class="tags"><li>ESP32</li><li>IoT</li><li>Isolation Forest</li><li>Flask</li><li>Jinja2</li><li>Chart.js</li><li>Python</li></ul>
+<ul class="pts">
+<li>Designed and built the whole system solo: an ESP32 sensor node sends live voltage, current, temperature and power readings by HTTP POST to a Flask REST API for real-time anomaly scoring.</li>
+<li>Trained an unsupervised Isolation Forest (100 estimators, contamination 0.1) on 4 electrical and thermal features. It detects abnormal transformer behavior without any labeled failure data.</li>
+<li>Delivered a live Jinja2 + Chart.js dashboard with sensor trend charts and instant fault alerts, moving maintenance from reactive repair to proactive monitoring.</li>
+<li>Owned the complete stack, from sensor hardware and model training to the REST backend and frontend charts.</li></ul>
+<a href="https://github.com/sivasankari-m1012" target="_blank" rel="noopener">View on GitHub</a></article>
+
+<article class="proj"><h3>Job Preparation Platform</h3>
+<ul class="tags"><li>Flask</li><li>REST APIs</li><li>Python</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Git</li></ul>
+<ul class="pts">
+<li>Built a full-stack job-tracking web app with Flask REST APIs and complete CRUD, so applicants manage job details and application status in one place.</li>
+<li>Added resume handling and company-specific preparation resources, covering the path from application to interview readiness.</li>
+<li>Built a responsive HTML/CSS/JavaScript interface and kept a clean history with incremental Git commits.</li></ul>
+<a href="https://github.com/sivasankari-m1012" target="_blank" rel="noopener">View on GitHub</a></article>
+
+<article class="proj"><h3>Fault Detection in Power Systems using DFS</h3>
+<ul class="tags"><li>Python</li><li>DFS</li><li>Graphs</li><li>Algorithms</li></ul>
+<ul class="pts">
+<li>Modeled a power system as a graph (buses as nodes, transmission lines as edges) and implemented Depth-First Search in Python, running in O(V+E), to localize faulty nodes.</li>
+<li>Applied electrical engineering knowledge to a core algorithm, turning graph traversal into a practical fault-localization tool.</li></ul>
+<a href="https://github.com/sivasankari-m1012" target="_blank" rel="noopener">View on GitHub</a></article>
+</div></section>
+
+<section id="skills"><div class="wrap"><h2>Skills</h2>
+<div class="skills">
+<div><h3>Programming languages</h3><p>Python, JavaScript, HTML, CSS</p></div>
+<div><h3>Web &amp; APIs</h3><p>React.js, Node.js, Flask, Jinja2, REST APIs</p></div>
+<div><h3>Data &amp; ML</h3><p>Scikit-learn, NumPy, Pandas, Matplotlib</p></div>
+<div><h3>Databases</h3><p>SQL</p></div>
+<div><h3>Core CS</h3><p>Data Structures &amp; Algorithms, Object-Oriented Programming, SDLC</p></div>
+<div><h3>Tools &amp; platforms</h3><p>Git, GitHub, VS Code, Google Colab, Arduino IDE, Raspberry Pi OS, MATLAB/Simulink, Autodesk Fusion 360</p></div>
+<div><h3>Domain</h3><p>IoT, Control Systems, Power System Analysis, Smart Grid Concepts</p></div>
+</div></div></section>
+
+<section id="education"><div class="wrap"><h2>Education</h2>
+<ul class="tl">
+<li><time>2022 – 2026</time><div><b>B.E. Electrical and Electronics Engineering</b>University College of Engineering (BIT Campus), Anna University, Trichy. CGPA 7.83</div></li>
+<li><time>2021 – 2022</time><div><b>Higher Secondary Certificate (Class XII)</b>Amalraj Matriculation Higher Secondary School, Thiruvaiyaru. 82.3%</div></li>
+<li><time>2019 – 2020</time><div><b>Secondary School Leaving Certificate (Class X)</b>Amalraj Matriculation Higher Secondary School, Thiruvaiyaru. 84.6%</div></li>
+</ul></div></section>
+
+<section id="more"><div class="wrap two">
+<div><h3>Certifications &amp; training</h3><ul><li>Full Stack Development Masterclass, 30-day certification, NoviTech R&amp;D Private Limited</li><li>Employability Skills Development Training Programme</li></ul></div>
+<div><h3>Workshops</h3><ul><li>Embedded Systems and IoT Applications</li><li>ASIC Digital Signal Flow</li></ul></div>
+<div><h3>Honors &amp; awards</h3><ul><li><b>Student Coordinator, AVESHA’25</b> (national-level symposium): managed event operations and team coordination.</li><li><b>Student Cultural Coordinator</b> (department level): led cultural event planning and participation.</li></ul></div>
+</div></section>
+
+<section id="contact"><div class="wrap contact"><h2>Contact</h2>
+<p>I’m open to entry-level Software Engineer and Software Developer roles. Email is the fastest way to reach me.</p>
+<ul class="clist"><li><a href="mailto:sivasankarimurugan10@gmail.com">sivasankarimurugan10@gmail.com</a></li><li><a href="tel:+919003810469">+91 90038 10469</a></li><li>Thanjavur, Tamil Nadu, India</li><li><a href="https://github.com/sivasankari-m1012" target="_blank" rel="noopener">github.com/sivasankari-m1012</a></li></ul>
+</div></section>
+</main>
+<footer><div class="wrap">© 2026 Sivasankari M</div></footer>
+
+<script>
+(function(){
+var tr=document.getElementById('tr'),dot=document.getElementById('dot'),st=document.getElementById('st');
+var N=80,pts=[],t=0,spike=0;
+function val(){t+=.25;var v=Math.sin(t)*14+Math.sin(t*2.3)*4+(Math.random()-.5)*4;
+if(spike>0){v+=(spike%2?-1:1)*(18+spike*3);spike--;}return v}
+function draw(){var s='';for(var i=0;i<pts.length;i++){s+=(i*400/(N-1)).toFixed(1)+','+(80-pts[i]).toFixed(1)+' '}
+tr.setAttribute('points',s);var last=pts[pts.length-1];dot.setAttribute('cx',((pts.length-1)*400/(N-1)).toFixed(1));dot.setAttribute('cy',(80-last).toFixed(1));
+var bad=spike>0;st.textContent=bad?'Anomaly detected':'Normal';st.className='status'+(bad?' bad':'');
+tr.setAttribute('stroke',bad?'var(--alert)':'var(--accent)');dot.setAttribute('fill',bad?'var(--alert)':'var(--accent)');
+var set=function(id,x){document.getElementById(id).textContent=x};
+set('rv',(230+last*.4).toFixed(0)+' V');set('ra',(12+last*.15).toFixed(1)+' A');set('rt',(48+Math.abs(last)*.6+(bad?12:0)).toFixed(0)+' °C');set('rs',(bad?0.62+Math.random()*.2:0.1+Math.random()*.06).toFixed(2))}
+for(var i=0;i<N;i++)pts.push(val());draw();
+if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+setInterval(function(){if(spike===0&&Math.random()<.015)spike=6;pts.push(val());if(pts.length>N)pts.shift();draw()},110);
+})();
+</script>
+</body>
+</html>
